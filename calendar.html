@@ -1,0 +1,62 @@
+    <!-- Most of this code is AI generated -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Place this in a script tag in the head or before the closing body tag -->
+<script src="auth.js"></script>
+<script>
+    checkAuthentication(); // Redirects if user is not authenticated
+</script>
+
+</head>
+<body>
+    <a href="home.html" class="back-home">
+        <img src="Home Symbol.jpg" alt="Back to Homepage" style="width: 50px; height: auto; margin-bottom: 10px">
+    </a>
+    
+    <h1>Mental Calendar</h1>
+    <label for="monthSelect">Select Month:</label>
+    <select id="monthSelect">
+        <option value="0">January</option>
+        <option value="1">February</option>
+        <option value="2">March</option>
+        <option value="3">April</option>
+        <option value="4">May</option>
+        <option value="5">June</option>
+        <option value="6">July</option>
+        <option value="7">August</option>
+        <option value="8">September</option>
+        <option value="9">October</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+    </select>
+    
+    <div id="calendar" class="calendar"></div>
+    
+    <!-- Modal for journal entry and color selection -->
+    <div id="journalModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="journalDate"></h2>
+            <textarea id="journalText" placeholder="Write your feelings here..."></textarea>
+            <label for="colorPicker">How did your day go?</label>
+            <select id="colorPicker">
+                <option value="#FF0000">Very Bad</option>
+                <option value="#F97001">Bad</option>
+                <option value="#F9F902">Neutral</option>
+                <option value="#D508FE">Good</option>
+                <option value="#00FF00">Very Good</option>
+                <option value="#FFFFFF">=reset=</option>
+            </select>
+            <button id="saveEntry">Save Entry</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

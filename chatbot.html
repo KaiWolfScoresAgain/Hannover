@@ -1,0 +1,43 @@
+    <!-- Most of this code is AI generated -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot with Sentiment Analysis</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <a href="home.html">
+        <img src="Home Symbol.jpg" alt="Back to Homepage" style="width: 50px; height: auto; margin-top: 500px">
+    </a>
+    <div style="display: flex;">
+        <!-- Image area for displaying polarity image -->
+        <div id="imageArea" style="margin-left: -500px; margin-top: 200px"></div>
+
+    <div class="container">
+        <!-- Left side sentiment image -->
+        <div id="sentimentImage" class="sentiment-image">
+            <!-- Placeholder for sentiment image -->
+        </div>
+
+        <!-- Right side chat container -->
+        <div class="chat-container">
+            <div id="chatArea" class="chat-area"></div>
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button id="sendButton">Send</button>
+            <button id="clearButton">Clear All</button>
+            <button id="changeNameButton">Change Name</button>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+    <script>
+        // Event listener for the Change Name button
+        document.getElementById("changeNameButton").addEventListener("click", function() {
+            window.location.href = "nameSetup.html";
+            localStorage.removeItem("chatbotName");
+        });
+    </script>
+</body>
+</html>
