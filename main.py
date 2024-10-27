@@ -7,7 +7,7 @@ matcher = Matcher(nlp.vocab)
 
 patterns = [
     [{"LEMMA": "can"}, {"LEMMA": "not"}, {"LEMMA": "sleep"}, {"POS": "ADV", "OP": "?"}],  # "can't sleep"
-    [{"LEMMA": "confused"}, {"LOWER": "about"}, {"LOWER": "job"}, {"LEMMA": "prospect"}],  # "confused about job prospects"
+    [{"LEMMA": "confused"}, {"LOWER": "about"}, {"LOWER": "job"}, {"LEMMA": "prospects"}],  # "confused about job prospects"
     [{"LEMMA": "worry"}, {"POS": "ADV", "OP": "?"}],  # Generalize for adverbs (e.g., "slightly worried", "very worried")
     [{"POS": "ADV", "OP": "?"}, {"LEMMA": "worried"}],
     [{"POS": "ADV", "OP": "?"}, {"LEMMA": "happy"}],
@@ -116,7 +116,7 @@ avg_intensity = net_intensity(classified_concerns)
 
 if avg_intensity == 0:
     print("polarity = positive")
-elif intensity > 2:
+elif avg_intensity > 2:
     print("polarity = negative")
 else:
     print("polarity = neutral")
